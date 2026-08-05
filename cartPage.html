@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Land|Carte Page</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/cartPage.css" />
+  </head>
+  <body>
+    <section>
+      <div class="leftSiteBox">
+        <div class="shopingCart">
+          <nav class="navBar">
+            <a href="index.html"
+              ><h1>
+                <i class="fa-solid fa-angle-left"></i>Shopping Continue
+              </h1></a
+            >
+            <hr />
+          </nav>
+          <h1>Shopping cart</h1>
+
+          <p>You have <span id="cartItemCount">0</span> item in your cart</p>
+        </div>
+        <div id="cartItems"></div>
+      </div>
+
+      <div class="rightSiteCard">
+        <h1 class="titleCart">Card Details</h1>
+        <p class="cartType">Cart type</p>
+
+        <div class="cartBox">
+          <img src="img/mastercart.png" alt="" width="150px" />
+          <img src="img/visa.png" alt="" width="150px" />
+          <img src="img/rupay.png" alt="" width="150" />
+          <p>See all</p>
+        </div>
+
+        <h1 id="cardNameLabel" class="cartInputName">Name on card</h1>
+        <input
+          id="cardNameInput"
+          class="cartInput"
+          type="text"
+          placeholder="Name"
+        />
+        <p id="cardNameError" class="errorCartName">
+          Name should be at least 2 characters
+        </p>
+
+        <h1 id="cardNumberLabel" class="cartInputName">Card Number</h1>
+        <input
+          id="cardNumberInput"
+          class="cartInput"
+          type="text"
+          inputmode="numeric"
+          autocomplete="cc-number"
+          placeholder="1111 2222 3333 4444"
+          maxlength="19"
+        />
+        <p id="cardNumberError" class="errorCartName">
+          Card number must contain exactly 16 digits
+        </p>
+
+        <div class="lastInput">
+          <div class="cartDataBox">
+            <h1 id="expDateLabel" class="cartInputName">Expiration date</h1>
+            <input
+              id="expDateInput"
+              class="cartInput"
+              type="text"
+              inputmode="numeric"
+              placeholder="mm/yy"
+              maxlength="5"
+            />
+            <p id="expDateError" class="errorCartName">
+              Expiration date must be valid (MM/YY)
+            </p>
+          </div>
+
+          <div class="cartCvv">
+            <h1 id="cvvLabel" class="cartInputName">CVV</h1>
+            <input
+              id="cvvInput"
+              class="cartInput"
+              type="password"
+              inputmode="numeric"
+              placeholder="***"
+              maxlength="3"
+            />
+            <p id="cvvError" class="errorCartName">CVV should be 3 digits</p>
+          </div>
+        </div>
+        <hr id="hrCart" color="#035846" />
+
+        <div class="footerBox">
+          <h1 class="footerPaymentName">Subtotal</h1>
+          <span id="subtotalValue" class="paymentPrice">$0.00</span>
+        </div>
+
+        <div class="footerBox">
+          <h1 class="footerPaymentName">Shipping</h1>
+          <span id="shippingValue" class="paymentPrice">$0.00</span>
+        </div>
+
+        <div class="footerBox">
+          <h1 class="footerPaymentName">Total (Tax incl.)</h1>
+          <span id="totalValue" class="paymentPrice">$0.00</span>
+        </div>
+
+        <div class="totalPriceFooter">
+          <span id="totalPriceFooter">$0.00</span>
+          <div id="checkoutButton" class="checkOut">
+            <h1>Checkout</h1>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modal-success" class="modal-success">
+      <div class="modal-content">
+        <div class="content-hero">
+          <h3>Order has been paid successfully</h3>
+          <div class="checkmark">
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/cartPage.js" defer></script>
+  </body>
+</html>

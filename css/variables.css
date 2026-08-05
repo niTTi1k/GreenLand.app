@@ -1,0 +1,10 @@
+:root{
+    --primary-color: #4A9C80;
+    --bg-product-color: #89898921;
+
+    --title: 63px;
+
+    --chelsea-font: "Chelsea Market", system-ui;
+    --montserrat-font: "Montserrat", sans-serif;
+    --vertical-font: "Vertical", cursive;
+}
